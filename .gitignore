@@ -1,0 +1,4 @@
+kenken.exe
+*.o
+*.out
+puzzles/besttimes.txt
