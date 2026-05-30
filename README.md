@@ -35,11 +35,11 @@ The goal is to fill an N×N grid with digits so that:
 
 ### The Grid
 - The puzzle is played on an **N×N grid** (this game supports 4×4, 5×5, and 6×6)
-- Digits used are **1 through N** — for a 4×4 grid, digits are 1, 2, 3, 4
+- Digits used are **1 through N** - for a 4×4 grid, digits are 1, 2, 3, 4
 
 ### Rows and Columns
-- Every **row** must contain each digit from 1 to N **exactly once** — no repeats
-- Every **column** must contain each digit from 1 to N **exactly once** — no repeats
+- Every **row** must contain each digit from 1 to N **exactly once** - no repeats
+- Every **column** must contain each digit from 1 to N **exactly once** - no repeats
 - This rule is identical to Sudoku's row/column rule
 
 ### Cages
@@ -59,14 +59,14 @@ The goal is to fill an N×N grid with digits so that:
 
 ### Important Notes
 - Subtraction and division cages always have **exactly 2 cells**
-- For subtraction/division, **order does not matter** — only the result counts
+- For subtraction/division, **order does not matter** - only the result counts
 - Addition and multiplication cages can have **2 or more cells**
 - A digit **can repeat inside a cage** as long as rows and columns stay valid
   - Example: cage `4+` in a 4×4 grid can be filled as (2,2) since 2+2=4,
     as long as those two cells are in different rows and different columns
 
 ### How to Solve
-1. Start with single-cell cages — those digits are fixed immediately
+1. Start with single-cell cages - those digits are fixed immediately
 2. Look for cages where only one combination of digits is possible
 3. Use row/column constraints to eliminate possibilities
 4. When stuck, use logical deduction across intersecting rows, columns and cages
@@ -76,7 +76,7 @@ The goal is to fill an N×N grid with digits so that:
 ## Features
 
 ### Puzzle Generation
-- Fully **random puzzle generator** — every game is a new puzzle
+- Fully **random puzzle generator** - every game is a new puzzle
 - Supports **4×4, 5×5 and 6×6** grid sizes
 - Uses **Latin Square construction** with row, column and value shuffling for true randomness
 - Cage generation uses a **greedy neighbor-grouping algorithm**
@@ -95,13 +95,13 @@ The goal is to fill an N×N grid with digits so that:
 
 ### Interactive Gameplay
 - Clean **console UI** with colored output (ANSI colors)
-- **Two-grid display** — left grid shows cage layout by number, right grid shows your answers
+- **Two-grid display** - left grid shows cage layout by number, right grid shows your answers
 - **Cage information panel** explaining every cage's cells, operator and target
 - **Live stats bar** showing elapsed time, move count and hints used
 
 ### Input Validation
 - Detects **row and column conflicts** immediately when you enter a value
-- Prevents **overwriting a filled cell** — must clear it first
+- Prevents **overwriting a filled cell** - must clear it first
 - Handles **invalid input** (letters where numbers expected, unknown commands) gracefully
 
 ### Hint System
@@ -109,7 +109,7 @@ The goal is to fill an N×N grid with digits so that:
 - Hint count is tracked and shown in the stats bar
 
 ### Undo
-- `[U]` undoes the last move — works for both placing and clearing values
+- `[U]` undoes the last move - works for both placing and clearing values
 - Full move history maintained using a **stack**
 
 ### Save and Load
@@ -194,16 +194,16 @@ These commands are available at any point during gameplay:
 
 | Key | Action | Details |
 |-----|--------|---------|
-| `E` | **Enter a value** | Prompts: `Row Col Value` — place a digit on the board |
-| `C` | **Clear a cell** | Prompts: `Row Col` — removes the value from a cell |
+| `E` | **Enter a value** | Prompts: `Row Col Value` - place a digit on the board |
+| `C` | **Clear a cell** | Prompts: `Row Col` - removes the value from a cell |
 | `U` | **Undo** | Reverses your last action (place or clear) |
-| `H` | **Hint** | Reveals one correct cell — increments hint counter |
+| `H` | **Hint** | Reveals one correct cell - increments hint counter |
 | `A` | **Auto-solve** | Solves the entire puzzle using the built-in solver |
 | `S` | **Save progress** | Saves current board state to a file for later |
 | `Q` | **Quit to menu** | Returns to the main menu without losing progress warning |
 
 ### Entering values
-- Row and column are **0-indexed** — top-left cell is `(0, 0)`
+- Row and column are **0-indexed** - top-left cell is `(0, 0)`
 - For a 4×4 grid: rows and columns are `0, 1, 2, 3`
 - Example: `E` → `0 2 3` places the digit `3` at row 0, column 2
 
@@ -271,7 +271,7 @@ These commands are available at any point during gameplay:
 | Concept | Where Used |
 |---------|-----------|
 | **Object Oriented Programming** | Separate classes for Grid, Cage, Solver, Generator, Game |
-| **Backtracking Algorithm** | Core of the Solver — recursively tries values, undoes on failure |
+| **Backtracking Algorithm** | Core of the Solver - recursively tries values, undoes on failure |
 | **Constraint Satisfaction Problem (CSP)** | Cage constraints modelled and checked at each step |
 | **Forward Checking / Pruning** | Partial cage checks eliminate invalid branches early |
 | **Latin Square Construction** | Generator builds a valid solved board before creating cages |
