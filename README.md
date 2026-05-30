@@ -79,13 +79,13 @@ The goal is to fill an N×N grid with digits so that:
 - Fully **random puzzle generator** - every game is a new puzzle
 - Supports **4×4, 5×5 and 6×6** grid sizes
 - Uses **Latin Square construction** with row, column and value shuffling for true randomness
-- Cage generation uses a **greedy neighbor-grouping algorithm**
+- Cage generation uses a **greedy neighbour-grouping algorithm**
 - Operators and targets are computed automatically from the solution
 
 ### Difficulty Levels
-- **Easy** — smaller grid, simpler cages, more single-cell and addition cages
-- **Medium** — mixed operators, moderate cage sizes
-- **Hard** — larger grid, more multiplication and division cages
+- **Easy** - smaller grid, simpler cages, more single-cell and addition cages
+- **Medium** - mixed operators, moderate cage sizes
+- **Hard** - larger grid, more multiplication and division cages
 
 ### Puzzle Solver
 - Built-in **backtracking solver** with **constraint propagation**
