@@ -1,4 +1,4 @@
-# KenKen Puzzle Game 🧩
+# KenKen Puzzle Engine 🧩
 
 A fully interactive, console-based **KenKen puzzle game** built in **C++** from scratch.
 Features a random puzzle generator, a backtracking solver with constraint propagation,
